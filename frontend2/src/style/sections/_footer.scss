@@ -1,132 +1,113 @@
-.section_partners{
-    background-color: transparent;
+//FOOTER
+.section-footer{
+    @extend .section-header;
+    padding: 5px 0;
 }
 
-.container_partners{
-    padding: 90px 0;
-    
-    ul{
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-    }
-    
-    li{
-        display: inline-block;       
-    }
-    
-    a{
-        display: block;
-        width: 154px;
-        height: 60px;
-    }
-    
-    .partner-1 a{
-        background: url($src-img-sprites + 'logos.png') 0 0 no-repeat;
-    }
-    .partner-2 a{
-        background: url($src-img-sprites + 'logos.png') -185px 0 no-repeat;
-    }
-    .partner-3 a{
-        background: url($src-img-sprites + 'logos.png') -355px 0 no-repeat;
-    }
-    .partner-4 a{
-        background: url($src-img-sprites + 'logos.png') -525px 0 no-repeat;
-    }
-    .partner-5 a{
-        background: url($src-img-sprites + 'logos.png') -710px 0 no-repeat;
-    }
-    .partner-6 a{
-        background: url($src-img-sprites + 'logos.png') -895px 0 no-repeat;
-    }
-}
-
-// -------------------------------------------------------------------------
-
-.section_navigaton{
-    background-color: $bg-color-menu;
-}
-
-.container_navigation{
-    padding: 60px 0 75px;
-}
-
-.navigation{
-    float: left;
-    width: $navigation-width;
-    margin-right: (40/1160)*100%;
-}
-
-.navigation__header{
-    color: $color-menu-top;
-    margin-bottom: 45px;
-    cursor: default;
-}
-
-.navigation:last-child{
-    margin-right: 0;
-}
-
-.navigation__menu{
-    
-    a{
-        line-height: 25px;
-        color: $color-describe-p;
-        font-family: $font-arial;
-        font-size: $font-size-p;
-    }
-    a:hover{
-        color: $bg-color-menu-active;
-    }
-    
-    hr{
-        border-bottom:0;
-    }
-}
-
-// ------------------------------------------------------------------------
-
-.section_contacts{
-    background-color: $bg-color-contacts;
-}
-
-.container_contacts{
-    padding: 20px 0;
-    
-    ul{
-        float: left;
-        color: $color-describe-p;
-    }
-    
-    li{
-        position: relative;
-        display: inline-block;
-        padding: 0 20px;
-        font-size: $font-size-contacts;
-    }
-    
-    p{
-        float: right;
-        color: $color-describe-p;
-        font-size: $font-size-contacts;
-    }
-}
-
-.contacts__adress::before{
-    position: absolute;
-    top: -2px;
-    left: 0;
+.section-footer::after{
+    content: '';
     display: block;
-    width: 17px;
-    height: 18px;  
-    content: "";
-    background: url($src-img-sprites + 'contacts.png') 0 0 no-repeat;
+    clear: both;
 }
-.contacts__phone::before{
-    @extend  .contacts__adress::before;
-    background: url($src-img-sprites + 'contacts.png') -25px 0 no-repeat;
+
+.logo_footer{
+    margin: 0 auto;
+    width: 140px;
+
+    a{
+        color: #ff4e50;
+        font-size: 16px;
+    }
 }
-.contacts__email::before{
-    @extend  .contacts__adress::before;
-    background: url($src-img-sprites + 'contacts.png') -49px 0 no-repeat;
+
+.menu{
+    margin: 13px auto 16px;
+    text-align: center;
+}
+
+.menu__title{
+    margin-bottom: 4px;
+    color: #333;   
+}
+
+.menu__item{
+    display: inline-block;
+    margin: 0 5px;
+
+    a{
+        color: #666;
+        font-family: 'Roboto light', Arial, sans-serif;
+    }
+
+    a:hover{
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+.designer{
+    text-align: center;
+
+    p{
+        color: #ccc;
+        font-size: 10px;
+        font-family: Montserrat, Arial, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    img{
+        margin: 8px 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .section-footer{
+        padding: 37px 40px;
+        max-width: 768px;
+    }
+
+    .logo_footer,
+    .menu{
+        float: left;
+    }
+
+    .logo_footer{
+        font-size: 16px;
+    }
+
+    .menu{
+        margin: 0 105px 0 85px;
+    }
+
+    .menu__item{
+        display: block;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .menu_partners{
+        margin: 0;
+    }
+
+    .designer{
+        float: right;
+    }
+
+}
+
+@media screen and (min-width: 1440px){
+    .section-footer{
+        padding: 37px 233px;
+        max-width: 1440px;
+    }
+
+    .logo_footer{
+        margin: 0 16px;
+    }
+
+    .menu{
+        margin: 0 5px 0 85px;
+    }
 }

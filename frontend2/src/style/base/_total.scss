@@ -1,40 +1,87 @@
-body{
-    background-color: $bg-color-main;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-bold-webfont.eot');
+    src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
-.section{
-    width: $section-width;
-    background-color: $bg-color-main;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.container{
-    margin: 0 auto;
-    width: $container-width;
-    max-width: $container-max-width;
-    min-width: $container-min-width;
-}
-.container::after{
-    content: '';
-    display: block;
-    clear: both;
+@font-face {
+    font-family: 'Roboto light';
+    src: url('../fonts/roboto-light-webfont.eot');
+    src: url('../fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
 
-h1, h3, h4, h5{
-    font-family: $font-ubuntu;
-    font-weight: 500;
+html{
+    background-color: #fff;
 }
-h1{
-    font-size: $font-size-h1;
+
+header{
+    background: #333 url('../img/header.jpg') center top no-repeat;
+    background-size: cover;
 }
+
+main,
+footer{
+    background-color: #fff;
+}
+
+footer hr{
+    margin: 0;
+    height: 4px;
+    border: 0;
+    background-color: #ff4e50;
+}
+
+h1, h2, h3,
+h4, h5, a, 
+input[type="submit"]{
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+}
+
+h2{
+    font-size: 30px;
+}
+
 h3{
-    font-size: $font-size-h3;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+    font-size: 22px;
 }
+
 h4{
-    font-size: $font-size-h4;
+    color: #fff;
+    font-size: 24px;
 }
-h5{
-    font-size: $font-size-h5;
+
+h5, a,
+input{
+    font-size: 14px;
 }
-h6{
-    display: none;
+
+p,
+input[type="text"]{
+    font-family: 'Roboto light', Arial, sans-serif;
+}
+
+@media screen and (min-width: 768px){
+    h2{
+        font-size: 52px;
+    }
 }

@@ -1,7 +1,23 @@
-@mixin transition($prop, $time, $bezier) {
+@mixin transition($prop, $time, $bezier){
   -webkit-transition: $prop $time $bezier;
      -moz-transition: $prop $time $bezier;
       -ms-transition: $prop $time $bezier;
        -o-transition: $prop $time $bezier;
           transition: $prop $time $bezier;
+}
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $spred, $color){
+  -webkit-box-shadow: $x $y $blur $spred $color;
+     -moz-box-shadow: $x $y $blur $spred $color;
+      -ms-box-shadow: $x $y $blur $spred $color;
+       -o-box-shadow: $x $y $blur $spred $color;
+          box-shadow: $x $y $blur $spred $color;
 }
