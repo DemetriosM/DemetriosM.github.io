@@ -45,6 +45,7 @@
     var flag = false;
     $('#search').on('submit', request)
                 .trigger('submit');
+                
 
     function request(e) {
 
@@ -54,7 +55,7 @@
           text = searchField.val();
           if (text.length === 0) return;
         } else {
-          text = 'active recreation';
+          text = 'active holiday';
           flag = true;
         }
 

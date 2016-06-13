@@ -128,9 +128,10 @@
 
 .ideas__item{
     display: inline-block;
-    margin: 4px;        
+    margin-bottom: 20px;        
     height: 310px;
     line-height: 310px;
+    background-position: center center;
 }
 
 .ideas__item,
@@ -139,7 +140,7 @@
 }
 
 .ideas__item_big{
-    width: 484px;
+    width: 492px;
 }
 
 /*FOOTER*/
